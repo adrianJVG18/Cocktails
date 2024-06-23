@@ -9,7 +9,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.adrian.cocktails.commons.model.Response
+import com.adrian.commons.model.Response
 import com.adrian.cocktails.presentation.model.DrinkCardItem
 import com.adrian.cocktails.presentation.viewmodel.CocktailsViewModel
 

@@ -1,4 +1,4 @@
-package com.adrian.cocktails.commons.ext
+package com.adrian.commons.ext
 
 fun <D> List<D>.groupInPairs(): List<Pair<D, D?>> {
     val result = mutableListOf<Pair<D, D?>>()

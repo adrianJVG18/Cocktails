@@ -54,6 +54,8 @@ android {
 
 dependencies {
 
+    implementation(project(":Commons"))
+
     implementation(libs.bundles.jetpack)
     implementation(libs.bundles.jetpack.compose)
     implementation(platform(libs.androidx.compose.bom))
