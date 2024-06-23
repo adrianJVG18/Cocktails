@@ -6,8 +6,8 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.staggeredgrid.LazyVerticalStaggeredGrid
+import androidx.compose.foundation.lazy.staggeredgrid.StaggeredGridCells
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
@@ -19,10 +19,10 @@ import com.adrian.cocktails.ui.theme.CocktailsTheme
 
 @Composable
 fun DrinkCardsGrid(drinks: List<DrinkCardItem>) {
-    LazyVerticalGrid(
+    LazyVerticalStaggeredGrid(
         modifier = Modifier.padding(8.dp),
-        columns = GridCells.Adaptive(minSize = 176.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp),
+        columns = StaggeredGridCells.Adaptive(minSize = 176.dp),
+        verticalItemSpacing = 8.dp,
         horizontalArrangement = Arrangement.spacedBy(8.dp),
         content = {
             drinks.forEach {

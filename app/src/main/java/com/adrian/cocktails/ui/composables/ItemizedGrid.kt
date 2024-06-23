@@ -22,6 +22,7 @@ fun ItemizedGrid(items: List<String>) {
             Row(modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 4.dp)
+                .padding(start = 20.dp)
             ) {
                 Text(
                     modifier = Modifier.weight(1f),
