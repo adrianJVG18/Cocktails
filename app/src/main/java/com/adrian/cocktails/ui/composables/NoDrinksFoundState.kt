@@ -13,6 +13,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -34,7 +35,8 @@ fun NoDrinksFoundState() {
                 .width(150.dp)
                 .height(150.dp),
             painter = painterResource(id = R.drawable.search_off_24px),
-            contentDescription = "Icon of Magnifying glass with a 'X' to indicate Search Failure"
+            contentDescription = "Icon of Magnifying glass with a 'X' to indicate Search Failure",
+            colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.onSurface)
         )
         Text(
             text = "No Drinks Found related to that Name",

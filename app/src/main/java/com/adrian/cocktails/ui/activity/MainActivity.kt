@@ -55,6 +55,7 @@ private fun PreviewMainActivity() {
             color = MaterialTheme.colorScheme.background
         ) {
             Column {
+                Spacer(modifier = Modifier.height(8.dp))
                 SearchBar(input = "", onTextChanged = {}, onKeyboardDone = {})
                 Spacer(modifier = Modifier.height(8.dp))
                 DrinkCardsGrid(drinks = getPreviewDrinkCards())
