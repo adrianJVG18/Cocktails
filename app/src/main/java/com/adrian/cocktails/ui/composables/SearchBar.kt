@@ -12,12 +12,15 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 
+@OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun SearchBar(
     input: String,
@@ -30,16 +33,20 @@ fun SearchBar(
             .wrapContentSize()
             .padding(horizontal = 8.dp)
     ) {
+        val keyboardController = LocalSoftwareKeyboardController.current
+
         TextField(
             value = input,
             onValueChange = onTextChanged,
             // Makes the "enter" Key aware of the "Done" action
             keyboardOptions = KeyboardOptions.Default.copy(
-                imeAction = ImeAction.Done
+                imeAction = ImeAction.Search
             ),
             // Tells what to do "When" done
             keyboardActions = KeyboardActions(
-                onDone = { onKeyboardDone() }
+                onSearch = { onKeyboardDone().also {
+                    keyboardController?.hide()
+                }}
             ),
             modifier = Modifier
                 .fillMaxWidth()
