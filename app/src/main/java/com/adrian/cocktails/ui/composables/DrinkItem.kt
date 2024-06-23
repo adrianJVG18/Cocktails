@@ -66,13 +66,14 @@ private fun PreviewNoIngredientDrinkCard() {
 @Preview
 @Composable
 private fun PreviewDrinkCardWithIngredients() {
-    DrinkCard(DrinkCardItem("Cooler Margarita").apply {
+    DrinkCard(DrinkCardItem(
+        name = "Cooler Margarita",
         ingredients = listOf(
             "Triple sec",
             "Salt",
             "Lime Juice",
             "Tequila"
         )
-    })
+    ))
 }
 

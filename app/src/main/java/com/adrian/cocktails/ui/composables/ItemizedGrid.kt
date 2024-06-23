@@ -12,6 +12,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.adrian.cocktails.commons.ext.groupInPairs
 
 @Composable
@@ -28,6 +29,7 @@ fun ItemizedGrid(items: List<String>) {
                     overflow = TextOverflow.Ellipsis,
                     fontStyle = FontStyle.Italic,
                     fontWeight = FontWeight.Bold,
+                    fontSize = 12.sp,
                     text = "• ${pair.first}"
                 )
                 pair.second?.let {
@@ -37,6 +39,7 @@ fun ItemizedGrid(items: List<String>) {
                         overflow = TextOverflow.Ellipsis,
                         fontStyle = FontStyle.Italic,
                         fontWeight = FontWeight.Bold,
+                        fontSize = 12.sp,
                         text = "• ${pair.second}"
                     )
                 }

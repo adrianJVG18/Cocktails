@@ -54,26 +54,20 @@ fun PreviewDrinkCardsGrid() {
 
 fun getPreviewDrinkCards(): List<DrinkCardItem> {
     return listOf(
-        DrinkCardItem("Margarita").apply {
-            ingredients = listOf(
-                "Triple sec",
-                "Salt",
-                "Lime Juice",
-                "Tequila"
-            )
-        },
-        DrinkCardItem("Hot Chocolate").apply {
-            ingredients = listOf(
-                "Chocolate",
-                "Milk",
-                "Water",
-            )
-        },
+        DrinkCardItem(name = "Margarita", ingredients = listOf(
+            "Triple sec",
+            "Salt",
+            "Lime Juice",
+            "Tequila"
+        )),
+        DrinkCardItem(name = "Hot Chocolate", ingredients = listOf(
+            "Chocolate",
+            "Milk",
+            "Water",
+        )),
         DrinkCardItem("Something drinkable with a long ass name"),
-        DrinkCardItem("Royal Flush").apply {
-            ingredients = listOf(
-                "etc", "more etc", "double etc"
-            )
-        }
+        DrinkCardItem("Royal Flush", ingredients = listOf(
+            "etc", "more etc", "double etc"
+        ))
     )
 }
