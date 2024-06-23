@@ -1,4 +1,9 @@
 package com.adrian.cocktails.domain.repository
 
-class DrinksRepository {
+import com.adrian.cocktails.commons.model.Response
+import com.adrian.cocktails.domain.model.DrinkDto
+import kotlinx.coroutines.flow.Flow
+
+interface DrinksRepository {
+    fun getDrinksByName(name: String): Flow<Response<List<DrinkDto>>>
 }

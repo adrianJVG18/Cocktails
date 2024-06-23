@@ -1,4 +1,4 @@
-package com.adrian.cocktails.commons
+package com.adrian.cocktails.commons.model
 
 sealed class Response<T> {
     data class Loading<T>(val isLoading: Boolean) : Response<T>()
