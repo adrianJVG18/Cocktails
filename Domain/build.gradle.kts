@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.adrian.data"
+    namespace = "com.adrian.domain"
     compileSdk = 34
 
     defaultConfig {
@@ -35,11 +35,10 @@ android {
 dependencies {
 
     implementation(project(":Commons"))
+    implementation(project(":Data"))
 
-    // Data layer is the only aware that Retrofit is being implemented.
-    // Data layer is the only one that knows "How" the Data is obtained
-    implementation(libs.google.gson)
-    implementation(libs.bundles.retrofit)
+    // This layer only know about the Data Layer, but isn't aware "How" the Data is obtained
+    // For example: This Module isn't aware if Retrofit is implemented or not
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

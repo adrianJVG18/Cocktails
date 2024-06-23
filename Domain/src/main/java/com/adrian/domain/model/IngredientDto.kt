@@ -1,4 +1,4 @@
-package com.adrian.cocktails.domain.model
+package com.adrian.domain.model
 
 data class IngredientDto(
     val name: String,

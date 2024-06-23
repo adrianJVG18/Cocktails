@@ -23,3 +23,4 @@ rootProject.name = "Cocktails"
 include(":app")
 include(":Commons")
 include(":Data")
+include(":Domain")

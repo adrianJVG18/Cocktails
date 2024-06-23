@@ -1,6 +1,6 @@
 package com.adrian.cocktails.presentation.model
 
-import com.adrian.cocktails.domain.model.DrinkDto
+import com.adrian.domain.model.DrinkDto
 
 data class DrinkCardItem(
     val name: String,

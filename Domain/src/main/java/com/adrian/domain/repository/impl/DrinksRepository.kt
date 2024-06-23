@@ -1,16 +1,15 @@
-package com.adrian.cocktails.domain.repository.impl
+package com.adrian.domain.repository.impl
 
 import com.adrian.commons.model.Response
 import com.adrian.data.service.DrinksService
-import com.adrian.cocktails.domain.model.DrinkDto
-import com.adrian.cocktails.domain.model.toDto
-import com.adrian.cocktails.domain.repository.DrinksRepository
+import com.adrian.domain.model.DrinkDto
+import com.adrian.domain.model.toDto
+import com.adrian.domain.repository.DrinksRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
-import javax.inject.Inject
 
-internal class DrinksRepository @Inject constructor(
+internal class DrinksRepository(
     private val drinksService: DrinksService
 ): DrinksRepository {
 

@@ -55,7 +55,7 @@ android {
 dependencies {
 
     implementation(project(":Commons"))
-    implementation(project(":Data"))
+    implementation(project(":Domain"))
 
     implementation(libs.bundles.jetpack)
     implementation(libs.bundles.jetpack.compose)

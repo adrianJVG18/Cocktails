@@ -1,7 +1,7 @@
-package com.adrian.cocktails.domain.repository
+package com.adrian.domain.repository
 
 import com.adrian.commons.model.Response
-import com.adrian.cocktails.domain.model.DrinkDto
+import com.adrian.domain.model.DrinkDto
 import kotlinx.coroutines.flow.Flow
 
 interface DrinksRepository {

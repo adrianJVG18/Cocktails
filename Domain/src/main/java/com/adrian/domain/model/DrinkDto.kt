@@ -1,4 +1,4 @@
-package com.adrian.cocktails.domain.model
+package com.adrian.domain.model
 
 import com.adrian.data.model.Drink
 

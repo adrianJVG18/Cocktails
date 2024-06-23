@@ -6,7 +6,7 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.adrian.commons.model.Response
-import com.adrian.cocktails.domain.repository.DrinksRepository
+import com.adrian.domain.repository.DrinksRepository
 import com.adrian.cocktails.presentation.model.DrinkCardItem
 import com.adrian.cocktails.presentation.model.toCard
 import dagger.hilt.android.lifecycle.HiltViewModel
