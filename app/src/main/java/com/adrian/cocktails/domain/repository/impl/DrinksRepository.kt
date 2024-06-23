@@ -1,7 +1,7 @@
 package com.adrian.cocktails.domain.repository.impl
 
 import com.adrian.commons.model.Response
-import com.adrian.cocktails.data.service.DrinksService
+import com.adrian.data.service.DrinksService
 import com.adrian.cocktails.domain.model.DrinkDto
 import com.adrian.cocktails.domain.model.toDto
 import com.adrian.cocktails.domain.repository.DrinksRepository

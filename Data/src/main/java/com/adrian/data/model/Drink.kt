@@ -1,4 +1,4 @@
-package com.adrian.cocktails.data.model
+package com.adrian.data.model
 
 import com.google.gson.annotations.SerializedName
 

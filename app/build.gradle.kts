@@ -55,13 +55,11 @@ android {
 dependencies {
 
     implementation(project(":Commons"))
+    implementation(project(":Data"))
 
     implementation(libs.bundles.jetpack)
     implementation(libs.bundles.jetpack.compose)
     implementation(platform(libs.androidx.compose.bom))
-
-    implementation(libs.google.gson)
-    implementation(libs.bundles.retrofit)
 
     implementation(libs.dagger.hilt)
     kapt(libs.dagger.hilt.compiler)

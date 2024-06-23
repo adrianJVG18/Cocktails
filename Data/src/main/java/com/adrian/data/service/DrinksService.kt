@@ -1,6 +1,6 @@
-package com.adrian.cocktails.data.service
+package com.adrian.data.service
 
-import com.adrian.cocktails.data.model.DrinksResponse
+import com.adrian.data.model.DrinksResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 
