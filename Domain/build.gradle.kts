@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -39,6 +42,9 @@ dependencies {
 
     // This layer only know about the Data Layer, but isn't aware "How" the Data is obtained
     // For example: This Module isn't aware if Retrofit is implemented or not
+
+    implementation(libs.dagger.hilt)
+    kapt(libs.dagger.hilt.compiler)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

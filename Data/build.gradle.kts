@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -40,6 +43,9 @@ dependencies {
     // Data layer is the only one that knows "How" the Data is obtained
     implementation(libs.google.gson)
     implementation(libs.bundles.retrofit)
+
+    implementation(libs.dagger.hilt)
+    kapt(libs.dagger.hilt.compiler)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
