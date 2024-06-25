@@ -20,6 +20,6 @@ fun DrinkDto.toCard(): DrinkCardItem {
         name = this.name,
         alcoholic = this.alcoholic,
         ingredients = this.ingredients.map { it.name },
-        image = this.imageSource ?: ""
+        image = this.drinkThumb ?: ""
     )
 }
