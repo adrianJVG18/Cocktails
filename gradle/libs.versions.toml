@@ -17,6 +17,7 @@ jetbrainsKotlinJvm = "1.9.0"
 appcompat = "1.6.1"
 material = "1.10.0"
 mockito = "5.1.1"
+ksp = "1.9.0-1.0.13"
 coil = "2.6.0"
 
 [libraries]
@@ -49,7 +50,6 @@ coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coi
 
 mockito-core = { group = "org.mockito", name = "mockito-core", version.ref = "mockito" }
 mockito-inline = { group = "org.mockito", name = "mockito-inline", version.ref = "mockito" }
-
 
 
 [bundles]
@@ -90,6 +90,6 @@ jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "k
 hiltAndroid = { id = "com.google.dagger.hilt.android", version.ref = "hilt"}
 jetbrainsKotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
-
+kspSupport = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
 
