@@ -2,7 +2,6 @@ plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
 
-    id("kotlin-kapt")
     alias(libs.plugins.kspSupport)
     alias(libs.plugins.hiltAndroid)
 }
@@ -45,8 +44,13 @@ dependencies {
     implementation(libs.google.gson)
     implementation(libs.bundles.retrofit)
 
+    // Dagger - Hilt dependencies
     implementation(libs.dagger.hilt)
     ksp(libs.dagger.hilt.compiler)
+
+    // Room dependencies
+    implementation(libs.room.runtime)
+    ksp(libs.room.compiler)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
