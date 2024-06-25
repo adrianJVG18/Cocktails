@@ -7,4 +7,5 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinJvm) apply false
     alias(libs.plugins.androidLibrary) apply false
     alias(libs.plugins.kspSupport) apply false
+    alias(libs.plugins.roomSupport) apply false
 }

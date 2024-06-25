@@ -4,6 +4,8 @@ plugins {
 
     alias(libs.plugins.kspSupport)
     alias(libs.plugins.hiltAndroid)
+    //alias(libs.plugins.roomSupport)
+    id("androidx.room")
 }
 
 android {
@@ -32,6 +34,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+
+    room {
+        schemaDirectory("$projectDir/schemas")
     }
 }
 

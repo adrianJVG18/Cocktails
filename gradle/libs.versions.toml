@@ -95,5 +95,6 @@ hiltAndroid = { id = "com.google.dagger.hilt.android", version.ref = "hilt"}
 jetbrainsKotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
 kspSupport = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+roomSupport = { id = "androidx.room", version.ref = "room" }
 
 
