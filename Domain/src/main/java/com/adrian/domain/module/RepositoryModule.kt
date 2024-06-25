@@ -1,4 +1,4 @@
-package com.adrian.domain.client
+package com.adrian.domain.module
 
 import com.adrian.data.service.DrinksService
 import com.adrian.domain.repository.DrinksRepository

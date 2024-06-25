@@ -1,4 +1,4 @@
-package com.adrian.data.client
+package com.adrian.data.module
 
 import com.adrian.data.service.DrinksService
 import dagger.Module
