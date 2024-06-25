@@ -1,4 +1,4 @@
-package com.adrian.data.model
+package com.adrian.data.model.remote
 
 import com.google.gson.annotations.SerializedName
 

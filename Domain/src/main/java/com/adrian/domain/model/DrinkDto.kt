@@ -1,6 +1,6 @@
 package com.adrian.domain.model
 
-import com.adrian.data.model.Drink
+import com.adrian.data.model.remote.Drink
 
 /**
  * Data transfer object, containing the Deserialization of [Drink]
