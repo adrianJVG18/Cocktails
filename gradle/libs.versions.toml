@@ -16,6 +16,7 @@ hilt = "2.48"
 jetbrainsKotlinJvm = "1.9.0"
 appcompat = "1.6.1"
 material = "1.10.0"
+mockito = "5.1.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -42,6 +43,9 @@ dagger-hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compi
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
+mockito-core = { group = "org.mockito", name = "mockito-core", version.ref = "mockito" }
+mockito-inline = { group = "org.mockito", name = "mockito-inline", version.ref = "mockito" }
+
 
 
 [bundles]
@@ -63,6 +67,11 @@ jetpack-compose = [
 retrofit = [
     "retrofit2",
     "retrofit-converter"
+]
+
+mockito = [
+    "mockito-core",
+    "mockito-inline"
 ]
 
 
