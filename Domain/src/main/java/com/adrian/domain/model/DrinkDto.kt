@@ -2,6 +2,9 @@ package com.adrian.domain.model
 
 import com.adrian.data.model.Drink
 
+/**
+ * Data transfer object, containing the Deserialization of [Drink]
+ */
 data class DrinkDto(
     val id: String,
     val name: String = "",
@@ -27,6 +30,9 @@ data class DrinkDto(
     val dateModified: String?
 )
 
+/**
+ * extension function of [Drink] that converts from [Drink] to [DrinkDto]
+ */
 fun Drink.toDto(): DrinkDto = DrinkDto(
     id = this.idDrink ?: "Unknown Id",
     name = this.strDrink ?: "",
@@ -52,6 +58,9 @@ fun Drink.toDto(): DrinkDto = DrinkDto(
     dateModified = this.dateModified
 )
 
+/**
+ * Creates a list of [IngredientDto], from the ingredient and measure fields of the provided [Drink]
+ */
 private fun getIngredients(drink: Drink): List<IngredientDto> {
     return listOf(
         Pair(drink.strIngredient1, drink.strMeasure1),

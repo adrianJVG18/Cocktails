@@ -9,6 +9,10 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
 
+/**
+ * DrinksRepository (Implementation) it's internal for this module,
+ * and hidden for consumers of this module.
+ */
 internal class DrinksRepository(
     private val drinksService: DrinksService
 ): DrinksRepository {

@@ -9,6 +9,12 @@ import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 import com.adrian.domain.repository.impl.DrinksRepository as DrinksRepositoryImpl
 
+/**
+ * This modules tells Hilt how are provided the Repositories of this Layer.
+ *
+ * If For Module/library design reasons, Hilt were removed, another Design pattern must be
+ * implemented in order to provide an abstraction to this layer.
+ */
 @Module
 @InstallIn(SingletonComponent::class)
 object RepositoryModule {

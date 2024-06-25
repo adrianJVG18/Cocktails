@@ -2,6 +2,9 @@ package com.adrian.cocktails.presentation.model
 
 import com.adrian.domain.model.DrinkDto
 
+/**
+ * data class that contains the minimal information needed to display a Card of a Drink.
+ */
 data class DrinkCardItem(
     val name: String,
     val alcoholic: Boolean = false,
@@ -9,6 +12,9 @@ data class DrinkCardItem(
     val image: String = ""
 )
 
+/**
+ * Extension function of [DrinkDto] that maps from itself to [DrinkCardItem]
+ */
 fun DrinkDto.toCard(): DrinkCardItem {
     return DrinkCardItem(
         name = this.name,
