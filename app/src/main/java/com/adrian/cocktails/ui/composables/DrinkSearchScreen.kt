@@ -38,7 +38,7 @@ fun DrinkSearchScreen(cocktailsViewModel: CocktailsViewModel) {
             }
             is Response.Failure -> {
                 // Here it's going to be added better error communication to the User
-                NoDrinksFoundState()
+                ConnectionErrorState()
             }
             is Response.Success -> {
                 val drinks = (cocktails as Response.Success<List<DrinkCardItem>>).data
@@ -49,26 +49,39 @@ fun DrinkSearchScreen(cocktailsViewModel: CocktailsViewModel) {
 }
 
 @Preview(name = "Light theme", showBackground = true)
-@Preview(name = "Dark theme", showBackground = true, uiMode = Configuration.UI_MODE_NIGHT_YES)@Composable
+@Preview(name = "Dark theme", showBackground = true, uiMode = Configuration.UI_MODE_NIGHT_YES)
+@Composable
 fun PreviewDrinkSearchScreen_Grid() {
     PreviewDrinkCardsGrid()
 }
 
 @Preview(name = "Light theme", showBackground = true)
-@Preview(name = "Dark theme", showBackground = true, uiMode = Configuration.UI_MODE_NIGHT_YES)@Composable
+@Preview(name = "Dark theme", showBackground = true, uiMode = Configuration.UI_MODE_NIGHT_YES)
+@Composable
 fun PreviewDrinkSearchScreen_EmptyDrinksState() {
     PreviewEmptyDrinksState()
 }
 
 @Preview(name = "Light theme", showBackground = true)
-@Preview(name = "Dark theme", showBackground = true, uiMode = Configuration.UI_MODE_NIGHT_YES)@Composable
+@Preview(name = "Dark theme", showBackground = true, uiMode = Configuration.UI_MODE_NIGHT_YES)
+@Composable
 fun PreviewDrinkSearchScreen_ShowLoadingState() {
     PreviewShowLoadingState()
 }
 
 @Preview(name = "Light theme", showBackground = true)
-@Preview(name = "Dark theme", showBackground = true, uiMode = Configuration.UI_MODE_NIGHT_YES)@Composable
+@Preview(name = "Dark theme", showBackground = true, uiMode = Configuration.UI_MODE_NIGHT_YES)
+@Composable
 fun PreviewDrinkSearchScreen_NoDrinksFoundState() {
     PreviewNoDrinksFoundState()
 }
+
+@Preview(name = "Light theme", showBackground = true)
+@Preview(name = "Dark theme", showBackground = true, uiMode = Configuration.UI_MODE_NIGHT_YES)
+@Composable
+fun PreviewDrinkSearchScreen_ConnectionErrorState() {
+    PreviewConnectionErrorState()
+}
+
+
 
