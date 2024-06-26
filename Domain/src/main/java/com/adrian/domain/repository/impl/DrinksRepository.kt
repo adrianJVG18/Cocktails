@@ -21,8 +21,9 @@ internal class DrinksRepository(
         emit(Response.Loading(true))
         emit(
             Response.Success(
-            drinksService.getDrinksByName(name).drinks
-                .map { it.toDto() }
+            drinksService.getDrinksByName(name).drinks?.let { response ->
+                response.map { it.toDto() }
+            } ?: emptyList()
         ))
     }.catch {
         emit(Response.Failure(it as Exception, "${it.message}"))

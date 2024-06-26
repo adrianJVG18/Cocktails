@@ -42,7 +42,11 @@ fun DrinkSearchScreen(cocktailsViewModel: CocktailsViewModel) {
             }
             is Response.Success -> {
                 val drinks = (cocktails as Response.Success<List<DrinkCardItem>>).data
-                DrinkCardsGrid(drinks = drinks)
+                if (drinks.isNotEmpty()) {
+                    DrinkCardsGrid(drinks = drinks)
+                } else {
+                    NoDrinksFoundState()
+                }
             }
         }
     }
