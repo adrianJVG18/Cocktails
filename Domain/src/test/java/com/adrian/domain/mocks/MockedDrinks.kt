@@ -1,6 +1,6 @@
 package com.adrian.domain.mocks
 
-import com.adrian.data.model.remote.Drink
+import com.adrian.data.model.Drink
 import java.util.ArrayList
 
 object MockedDrinks {

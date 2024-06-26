@@ -49,6 +49,7 @@ material = { group = "com.google.android.material", name = "material", version.r
 coil-core = { group = "io.coil-kt", name = "coil", version.ref = "coil" }
 coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
 
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
 
@@ -85,6 +86,11 @@ mockito = [
 coil = [
     "coil-compose",
     "coil-core"
+]
+
+room = [
+    "room-ktx",
+    "room-runtime"
 ]
 
 

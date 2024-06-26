@@ -1,7 +1,8 @@
 package com.adrian.domain.repository.impl
 
 import com.adrian.commons.model.Response
-import com.adrian.data.model.remote.DrinksResponse
+import com.adrian.data.dao.DrinksDao
+import com.adrian.data.model.DrinksResponse
 import com.adrian.data.service.DrinksService
 import com.adrian.domain.mocks.MockedDrinks
 import com.adrian.domain.repository.DrinksRepository
@@ -24,13 +25,15 @@ class DrinksRepositoryTest {
 
     @Mock
     private lateinit var drinksService: DrinksService
+    @Mock
+    private lateinit var drinksDao: DrinksDao
 
     private lateinit var drinksRepository: DrinksRepository
 
     @Before
     fun setup() {
         MockitoAnnotations.openMocks(DrinksRepositoryTest::class)
-        drinksRepository = DrinksRepositoryImpl(drinksService)
+        drinksRepository = DrinksRepositoryImpl(drinksService, drinksDao)
     }
 
     @Test

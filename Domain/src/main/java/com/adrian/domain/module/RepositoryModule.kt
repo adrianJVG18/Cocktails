@@ -1,5 +1,6 @@
 package com.adrian.domain.module
 
+import com.adrian.data.dao.DrinksDao
 import com.adrian.data.service.DrinksService
 import com.adrian.domain.repository.DrinksRepository
 import dagger.Module
@@ -21,7 +22,10 @@ object RepositoryModule {
 
     @Singleton
     @Provides
-    fun drinksRepository(drinksService: DrinksService): DrinksRepository =
-        DrinksRepositoryImpl(drinksService)
+    fun drinksRepository(
+        drinksService: DrinksService,
+        drinksDao: DrinksDao
+    ): DrinksRepository =
+        DrinksRepositoryImpl(drinksService, drinksDao)
 
 }

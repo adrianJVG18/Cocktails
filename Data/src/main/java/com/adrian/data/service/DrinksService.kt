@@ -1,6 +1,6 @@
 package com.adrian.data.service
 
-import com.adrian.data.model.remote.DrinksResponse
+import com.adrian.data.model.DrinksResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 
