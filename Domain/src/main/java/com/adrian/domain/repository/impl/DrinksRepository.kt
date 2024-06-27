@@ -1,6 +1,5 @@
 package com.adrian.domain.repository.impl
 
-import android.util.Log
 import com.adrian.commons.model.Response
 import com.adrian.data.dao.DrinksDao
 import com.adrian.data.service.DrinksService
@@ -26,7 +25,6 @@ internal class DrinksRepository(
 
         if (drinksDao.getDrinksByName(name).isEmpty()) {
             // Fetch remotely the Drinks
-            Log.d("DrinksRepository", "Drinks from remote")
             val drinks = drinksService.getDrinksByName(name).drinks?.let { response ->
                 response.map { it.toDto() }
             } ?: emptyList()
@@ -40,7 +38,6 @@ internal class DrinksRepository(
                     ingredient.toDto()
                 }
             }
-            Log.d("DrinksRepository", "Drinks from local database")
             emit(Response.Success(drinks))
         }
 
@@ -53,7 +50,6 @@ internal class DrinksRepository(
         drinks.forEach { drink ->
             drinksDao.insertIngredients(drink.ingredients.map { it.toEntity(drink.id) })
         }
-        Log.d("DrinksRepository", "Drinks stored in local database")
     }
 
 
