@@ -3,7 +3,6 @@ package com.adrian.domain.repository.impl
 import com.adrian.commons.model.Response
 import com.adrian.data.dao.DrinksDao
 import com.adrian.data.entity.Drink as DrinkEntity
-import com.adrian.data.model.Drink as DrinkModel
 import com.adrian.data.model.DrinksResponse
 import com.adrian.data.service.DrinksService
 import com.adrian.domain.mocks.MockedDrinks
@@ -18,9 +17,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mock
 import org.mockito.Mockito.anyList
-import org.mockito.Mockito.anyLong
 import org.mockito.Mockito.anyString
-import org.mockito.Mockito.doNothing
 import org.mockito.Mockito.doReturn
 import org.mockito.MockitoAnnotations
 import org.mockito.junit.MockitoJUnitRunner
