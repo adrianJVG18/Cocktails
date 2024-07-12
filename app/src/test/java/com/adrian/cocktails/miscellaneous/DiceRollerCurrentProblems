@@ -1,0 +1,54 @@
+Problemas de la implementacion  actual de "cubilete" (tira dados):
+
+Este analisis parte de la premisa de que las entradas y salidas actuales de
+DiceRoller son necesarias y requeridas como estan definidas actualmente.
+Adicionalmente, se esta suponiendo que el dado que se esta modelando
+tiene exactamente 6 caras, para representar un la idea de obtener un valor
+aleatorio de el 1 al 6.
+
+Semilla fija
+    Como se ve en la linea de codigo "val random = Random(seed = 1)".
+    Esto esta configurando a que el generador de numeros aleatorios
+    siempre este generando la misma secuencia de numeros aleatorios,
+    Esto a nivel de "juegos" genera una vulnerabilidad para el negocio,
+    ya que un jugador experto con suficiente conocimiento tecnico,
+    puede predecir todos los resultados de Tiradas de dado No-cargadas (es
+    decir, el cubilete no hizo trampa)
+
+Muy Bajo Rendimiento y eficiencia
+    Actualmente se ve que la funcion "roll()", en la manera que se asegura de los
+    valores que se cargan al dado esten entre los valores que se esperarian
+    del dado, es mediante entrar en ciclo infinito hasta que aleatoriamente
+    se genere un valor no mayor a 6. Esto provoca que innecesariamente tengamos que
+    iterar sobre valores que tendran que descartarse, por una cantidad indeterminada
+    de veces.
+
+    La documentacion inmediata en la funcion nextInt() de "kotlin.random.Random", nos
+    explica que dicha funcion devuelve aleatoriamente valores
+    entre Int.MIN_VALUE and Int.MAX_VALUE (inclusive) (los cuales son -2**31 and 2**31 respectivamente)
+    Lo que quiere decir que la implementacion actual tiene una probabilidad de 6/(2**32) de
+    devolvernos un valor que este en el rango deseado.
+
+    Por ultimo, viendo este dato sobre las probabilidades de obtener un valor dentro del rango aceptable
+    sea tan bajo, la probabilidad de que el algoritmo nisiquiera alcance a terminar una "rolleada" de
+    dado es muy alta.
+
+La validacion actual no es suficiente
+    La validacion sobre "random.nextInt() <= 6" no es suficiente para el rango de valores que puede
+    devolver la funcion random.nextInt(), como vimos en el punto anterior, devuelve valores
+    entre Int.MIN_VALUE and Int.MAX_VALUE, lo que significa que tambien podemos obtener algun valor
+    entre [Int.MIN_VALUE, 0], y dichos valores complen con ser menor o igual a 6.
+    Si lo que se busca es modelar un Dado de 6 caras, tambien tiene que evitarse que los dados tengan
+    valores negativos o igual a 0.
+
+
+
+
+
+
+
+
+
+
+
+
